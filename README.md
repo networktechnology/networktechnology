@@ -1,16 +1,190 @@
-## Hi there 👋
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Network Technology</title>
 
-<!--
-**networktechnology/networktechnology** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      font-size: 1.2em; /* AUMENTO DE TAMAÑO DE TEXTO GENERAL */
+    }
+    header {
+      background-color: #1c1c1c;
+      color: white;
+      padding: 1em;
+      position: relative;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.2em; /* TÍTULO MÁS GRANDE */
+    }
+    #logo {
+      position: absolute;
+      right: 1em;
+      top: 1em;
+      height: 105px;
+    }
+    nav {
+      background-color: #00a6cf;
+      padding: 1em;
+      text-align: center;
+      font-size: 1.1em; /* MENÚ MÁS GRANDE */
+    }
+    .dropdown {
+      display: inline-block;
+      position: relative;
+      margin: 0 1em;
+    }
+    .dropdown button {
+      background-color: #00a6cf;
+      color: white;
+      border: none;
+      font-weight: bold;
+      padding: 0.6em 1.2em;
+      cursor: pointer;
+      font-size: 1.1em;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      color: black;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 0.6em;
+      color: #333;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+    .dropdown-content a:hover {
+      background-color: #eee;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .content {
+      display: none;
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-size: 1.2em; /* TEXTO DE SECCIONES MÁS GRANDE */
+    }
+    .content h2 {
+      font-size: 2em; /* TÍTULOS DE SECCIONES MÁS GRANDES */
+    }
+    .active {
+      display: block;
+    }
+    footer {
+      background-color: #1c1c1c;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NETWORK TECHNOLOGY</h1>
+    <img src="img/logo.png" id="logo" alt="Logo Network Technology" />
+  </header>
 
-Here are some ideas to get you started:
+  <nav>
+    <div class="dropdown">
+      <button>Estratégico</button>
+      <div class="dropdown-content">
+        <a href="#" onclick="showSection('mision')">Misión</a>
+        <a href="#" onclick="showSection('vision')">Visión</a>
+        <a href="#" onclick="showSection('objetivos')">Objetivos</a>
+        <a href="#" onclick="showSection('justificacion')">Justificación</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button>Operacional</button>
+      <div class="dropdown-content">
+        <a href="#" onclick="showSection('servicio')">Servicio</a>
+        <a href="#" onclick="showSection('ventajas')">Ventajas</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button>Organizacional</button>
+      <div class="dropdown-content">
+        <a href="#" onclick="showSection('organigrama')">Organigrama</a>
+        <a href="#" onclick="showSection('sostenibilidad')">Sostenibilidad</a>
+        <a href="#" onclick="showSection('responsabilidad')">Responsabilidad Social</a>
+      </div>
+    </div>
+  </nav>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+  <!-- Secciones -->
+  <section id="mision" class="content active">
+    <h2>Misión</h2>
+    <p>Nuestra misión es conectar a las personas y las comunidades a través de las tecnologías de redes confiables y eficientes, proporcionando soluciones innovadoras que mejoren la conectividad y la colaboración en todo el mundo.</p>
+  </section>
+
+  <section id="vision" class="content">
+    <h2>Visión</h2>
+    <p>Nuestra visión es convertirnos en líderes reconocidos en el diseño, implementación y gestión de soluciones de redes innovadoras y seguras, brindando un servicio al cliente excepcional y ayudando al avance tecnológico.</p>
+  </section>
+
+  <section id="objetivos" class="content">
+    <h2>Objetivos</h2>
+    <h3>Objetivo General</h3>
+    <p>Promover la satisfacción del cliente generando encuestas donde más del 80% de los usuarios se sientan a gusto con su red.</p>
+
+    <h3>Objetivos Específicos</h3>
+    <ul>
+      <li>Tener en cuenta las recomendaciones de nuestros usuarios.</li>
+      <li>Obtener un reconocimiento por nuestro buen servicio al cliente.</li>
+      <li>Alcanzar una empresa bien posicionada en el mercado nacional e internacionalmente.</li>
+    </ul>
+  </section>
+
+  <section id="justificacion" class="content">
+    <h2>Justificación</h2>
+    <p>Las empresas de redes tienen una creciente dependencia de Internet y la tecnología para operar en el ámbito empresarial, educativo, sanitario y gubernamental. Requieren servicios profesionales para implementar y mantener sus redes y minimizar los riesgos de fallos.</p>
+    <p>Network Technology busca ser una empresa con altos estándares de calidad, seguridad y buen servicio al cliente, ofreciendo soluciones inalámbricas y cableadas. Nuestro objetivo es llevar conectividad a zonas rurales donde ciudadanos y estudiantes puedan tener acceso a internet por primera vez.</p>
+  </section>
+
+  <section id="servicio" class="content"><h2>Servicio</h2><p>Instalación y mantenimiento de redes, configuración de routers y switches, diagnósticos de red y más.</p></section>
+
+  <section id="ventajas" class="content">
+    <h2>Ventajas</h2>
+    <ul>
+      <li>Servicio de calidad con óptimo funcionamiento de la red.</li>
+      <li>Diversos paquetes para facilidad de los clientes.</li>
+      <li>Atención personalizada y soporte confiable.</li>
+    </ul>
+  </section>
+
+  <section id="organigrama" class="content"><h2>Organigrama</h2><p>Contenido del organigrama...</p></section>
+  <section id="sostenibilidad" class="content"><h2>Sostenibilidad</h2><p>Contenido de sostenibilidad...</p></section>
+  <section id="responsabilidad" class="content"><h2>Responsabilidad Social</h2><p>Contenido de responsabilidad social...</p></section>
+
+  <footer>
+    <p>&copy; 2025 Network Technology. Todos los derechos reservados.</p>
+    <p><a href="mailto:Networktechnology0738@gmail.com" style="color:white;">Networktechnology0738@gmail.com</a></p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.content').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
