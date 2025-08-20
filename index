@@ -238,7 +238,7 @@ body:has(footer:in-view) footer {
       <li>Rural Link</li>
       <li>Soporte Plus</li>
     </ul>
-    <img src="img/paquetes.png" alt="Paquetes" style="display: block; margin: auto; max-width:100%; height:auto;" />
+    <img src="img/Paquetes.png" alt="Paquetes" style="display: block; margin: auto; max-width:100%; height:auto;" />
   </section>
   <section id="ventajas" class="content">
     <h2>Ventajas</h2>
@@ -253,10 +253,26 @@ Aquí no eres un cliente más: eres un aliado. Y cuando trabajas con nosotros, t
     <img src="img/organigrama.jpg" alt="Organigrama" style="max-width:100%;height:auto;" />
   </section>
   <section id="sostenibilidad" class="content">
-    <h2>Sostenibilidad</h2>
-    <p>Contenido de sostenibilidad...</p>
-  </section>
-  <section id="responsabilidad" class="content">
+  <h2>Sostenibilidad</h2>
+  <p>En <strong>Network Technology</strong> estamos comprometidos con un futuro más sostenible y con el impacto positivo en nuestro entorno. Nuestra estrategia de sostenibilidad se basa en tres pilares:</p>
+  <h3>1. Ambiental</h3>
+  <ul class="clean">
+    <li>Optimizamos el consumo energético en nuestras instalaciones y promovemos el uso de equipos y tecnologías eficientes.</li>
+    <li>Reciclamos equipos electrónicos obsoletos y fomentamos la reducción de residuos.</li>
+    <li>Colaboramos con programas de reforestación y conservación en las comunidades donde operamos.</li>
+  </ul>
+<h3>2. Social</h3>
+  <ul class="clean">
+    <li>Apoyamos la capacitación tecnológica en comunidades y escuelas locales.</li>
+    <li>Promovemos la inclusión digital, asegurando que más personas tengan acceso a internet y a la educación tecnológica.</li>
+  </ul>
+<h3>3. Económico</h3>
+  <ul class="clean">
+    <li>Adoptamos prácticas de negocio responsables que aseguran la continuidad y crecimiento sostenible de la empresa, generando valor para clientes, empleados y la comunidad.</li>
+  </ul>
+<p><strong>Compromiso:</strong> Creemos que la tecnología debe ir de la mano con el respeto al planeta y las personas, por eso cada proyecto se realiza pensando en minimizar su impacto ambiental y maximizar su beneficio social.</p>
+</section>
+<section id="responsabilidad" class="content">
     <h2>Responsabilidad Social</h2>
     <img src="img/social.png" alt="Responsabilidad Social" style="max-width:100%;height:auto;" />
     <p><strong>RSE</strong> es el compromiso voluntario de contribuir al desarrollo sostenible más allá de obligaciones legales.</p>
