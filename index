@@ -168,8 +168,15 @@ body:has(footer:in-view) footer {
     <div class="dropdown">
       <button>Operacional</button>
       <div class="dropdown-content">
-        <a href="#servicio" onclick="showSection('servicio')">Servicios</a>
+       <a href="#servicio" onclick="showSection('servicio')">Servicio</a>
         <a href="#ventajas" onclick="showSection('ventajas')">Ventajas</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button>Portafolio</button>
+      <div class="dropdown-content">
+        <a href="#servicios" onclick="showSection('servicios')">Servicios</a>
+        <a href="#paquetes" onclick="showSection('paquetes')">Paquetes & Promociones</a>
       </div>
     </div>
     <div class="dropdown">
@@ -181,6 +188,7 @@ body:has(footer:in-view) footer {
       </div>
     </div>
   </nav>
+
   <section id="mision" class="content active">
     <h2>Misión</h2>
     <p>Nuestra misión es conectar a las personas y comunidades a través de tecnologías de redes confiables y eficientes, proporcionando soluciones innovadoras que mejoren la conectividad y la colaboración en todo el mundo.</p>
@@ -206,18 +214,22 @@ body:has(footer:in-view) footer {
     <p>Network Technology busca altos estándares de calidad, seguridad y buen servicio, ofreciendo soluciones inalámbricas y cableadas y conectividad a zonas rurales.</p>
   </section>
   <section id="servicio" class="content">
-    <h2>Servicios</h2>
+    <h2>Servicio</h2>
     <p>Somos una empresa dedicada a la instalación y mantenimiento de redes, configuración de routers y switches, diagnóstico de red y más, con detalles en nuestro portafolio disponible en página web y redes sociales.</p>
-    <h3>Portafolio</h3>
+   </section>
+<section id="servicios" class="content">
+    <h2> Nuestro servicios </h2>
     <ul class="clean">
-      <li>Diseño e implementación de redes cableadas e inalámbricas.</li>
+     <li>Diseño e implementación de redes cableadas e inalámbricas.</li>
       <li>Configuración avanzada de routers, switches y firewalls.</li>
       <li>Diagnóstico y optimización de red.</li>
       <li>Cableado estructurado y certificación.</li>
       <li>Soluciones de seguridad perimetral y segmentación.</li>
       <li>Telefonía IP y redes para videovigilancia.</li>
     </ul>
-    <h3>Paquetes & Promociones</h3>
+      </section>
+    <section id="paquetes" class="content">
+    <h2>Paquetes & Promociones</h2>
     <ul class="clean">
       <li>Starter PyME</li>
       <li>Escuela Conectada</li>
@@ -229,7 +241,10 @@ body:has(footer:in-view) footer {
   <section id="ventajas" class="content">
     <h2>Ventajas</h2>
     <h3>¿Por qué elegirnos?</h3>
-    <p>En Network Technology entregamos trabajo óptimo y de calidad, cumplimos necesidades de clientes, contamos con paquetes de servicios accesibles y atención personalizada.</p>
+    <p>En Network Technology no solo instalamos y mantenemos redes: conectamos personas, ideas y oportunidades.
+Sabemos que para ti la tecnología no es un lujo, sino una herramienta esencial para que tu negocio funcione sin interrupciones. Por eso, trabajamos como si cada cable, cada configuración y cada detalle fueran para nuestra propia empresa.
+Nos eligen porque respondemos rápido, hablamos claro (sin tecnicismos innecesarios) y no descansamos hasta dejar todo funcionando como debe. Además, cuidamos tu inversión con soluciones seguras, escalables y pensadas para durar.
+Aquí no eres un cliente más: eres un aliado. Y cuando trabajas con nosotros, tienes la tranquilidad de contar con un equipo que se preocupa de verdad.</p>
   </section>
   <section id="organigrama" class="content">
     <h2>Organigrama</h2>
@@ -286,5 +301,4 @@ body:has(footer:in-view) footer {
 </script>
 </body>
 </html>
-
 
