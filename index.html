@@ -15,7 +15,7 @@
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* Efecto fade-in cuando el footer entra en pantalla */
+
 html:has(footer:is(:hover, :focus-within, :target)) footer,
 body:has(footer:in-view) footer {
   opacity: 1;
@@ -59,6 +59,7 @@ body:has(footer:in-view) footer {
 }
 
 .footer-bottom {
+  display: none; 
   background-color: rgba(0, 0, 0, 0.15);
   text-align: center;
   padding: 0.8em;
@@ -77,18 +78,26 @@ body:has(footer:in-view) footer {
       font-size: 1.2em;
     }
     header {
-      background-color: var(--dark);
-      color: white;
-      padding: 1em;
-      position: relative;
-      text-align: center;
+    background-color: white; /* Fondo blanco en el encabezado */
+    color: #003366; /* Azul oscuro para el texto */
+    padding: 0.5em; /* Menos padding para hacerlo más compacto */
+    position: relative;
+    text-align: center;
+    border-bottom: 2px solid #e6e6e6; /* Línea sutil para separar */
+  }
     }
-    header h1 { font-size: 2.2em; margin: 0; }
+    header h1 {
+  font-size: 2.8em;
+  margin: 0;
+  color: #001f3f; /* Azul más oscuro */
+  font-weight: 2000000000; /* Letra más gruesa (negrita fuerte) */
+  letter-spacing: 0.7px;
+}
     #logo {
-      position: absolute;
-      right: 1em;
-      top: 1em;
-      height: 105px;
+    position: absolute;
+    right: 1em;
+    top: -32px; /* Subimos el logo */
+    height: 180px;
     }
     nav {
       background-color: var(--brand);
@@ -139,23 +148,228 @@ body:has(footer:in-view) footer {
     .content h3 { margin-bottom: 0.4em; }
     .active { display: block; }
     footer {
-      background-color: var(--dark);
-      color: white;
-      text-align: center;
-      padding: 1em;
-      font-size: 1.1em;
-      position: relative; /* Footer normal, visible al final */
-    }
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 0.5em; /* Footer más corto */
+    font-size: 1em;
+  }
     footer a { color: white; text-decoration: underline; }
     ul.clean { padding-left: 1.1em; }
   </style>
 </head>
 <body>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 25px;
+      color: #222;
+      position: relative;
+    }
+    h2::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: #0077b6; 
+      display: block;
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+
+    .services-container {
+      max-width: 750px;
+      margin: auto;
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+      border-top: 6px solid #ff7b00; 
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 14px 10px;
+      border-bottom: 1px solid #ddd;
+      font-size: 16px;
+      color: #333;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .price {
+      text-align: right;
+      font-weight: 600;
+      color: #0077b6; /* Azul */
+    }
+
+    /* Alternar colores de fila */
+    tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    tr:hover {
+      background: #e6f0f7; 
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      td {
+        display: block;
+        text-align: left;
+      }
+      .price {
+        text-align: left;
+        margin-top: 5px;
+        display: block;
+        color: #ff7b00; 
+      }
+    }
+  </style>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #222;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: #0077b6;
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .packages-container {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 20px;
+    }
+
+    .package {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+      border-top: 6px solid cc6600;
+      transition: transform 0.2s ease;
+      position: relative;
+    }
+
+    .package:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .package h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #0077b6;
+    }
+
+    .package ul {
+      padding-left: 20px;
+      margin: 0 0 15px 0;
+    }
+
+    .package ul li {
+      margin-bottom: 8px;
+      color: #444;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: 600;
+      color: cc6600;
+      text-align: right;
+    }
+    .tag {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #0077b6;
+      color: #fff;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 20px;
+    }
+    .mascota-container {
+  position: fixed;
+  bottom: 15px;
+  right: 25px;
+  display: flex;
+  align-items: flex-end;
+  z-index: 1000;
+}
+
+.mascota {
+  width: 120px;
+  cursor: pointer;
+}
+
+.dialogo {
+  display: none;
+  background: #ffffff;
+  border: 2px solid #0077cc;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-right: 10px;
+  max-width: 240px;
+  font-size: 14px;
+  color: #222;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.dialogo::after {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  right: -15px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent transparent #0077cc;
+}
+  </style>
   <header>
     <h1>NETWORK TECHNOLOGY</h1>
-    <img src="img/logo.jpg" id="logo" alt="Logo Network Technology" />
+    <img src="img/logo.png" id="logo" alt="Logo Network Technology" />
   </header>
   <nav>
+    <div class="dropdown">
+      <button>Inicio</button>
+      <div class="dropdown-content">
+        <a href="#Inicio" onclick="showSection('Inicio')">Inicio</a>
+      </div>
+    </div>
     <div class="dropdown">
       <button>Estratégico</button>
       <div class="dropdown-content">
@@ -173,12 +387,6 @@ body:has(footer:in-view) footer {
       </div>
     </div>
     <div class="dropdown">
-      <button>Portafolio</button>
-      <div class="dropdown-content">
-        <a href="#servicios" onclick="showSection('servicios')">Servicios</a>
-        <a href="#paquetes" onclick="showSection('paquetes')">Paquetes & Promociones</a>
-      </div>
-    </div>
     <div class="dropdown">
       <button>Organizacional</button>
       <div class="dropdown-content">
@@ -189,18 +397,26 @@ body:has(footer:in-view) footer {
     </div>
   </nav>
 
-  <section id="mision" class="content active">
+<section id="Inicio" class="content active">
+    <h2>Conocenos</h2>
+    <p>Somos una empresa dedicada a la instalación y mantenimiento de redes, configuración de routers y switches, diagnóstico de red y más, con detalles en nuestro portafolio disponible en página web y redes sociales..</p>
+  </section>
+  <section id="mision" class="content">
     <h2>Misión</h2>
-    <p>Nuestra misión es conectar a las personas y comunidades a través de tecnologías de redes confiables y eficientes, proporcionando soluciones innovadoras que mejoren la conectividad y la colaboración en todo el mundo.</p>
+    <p>Nuestra misión es impulsar la conexión entre personas, comunidades y organizaciones mediante el desarrollo y la implementación de tecnologías de redes seguras, confiables y de alto rendimiento. Nos comprometemos a ofrecer soluciones innovadoras y sostenibles que no solo mejoren la conectividad global, sino que también fomenten la colaboración, el intercambio de conocimiento y el crecimiento social.</p>
+    <p>A través de un enfoque centrado en la excelencia, la innovación constante y la responsabilidad, buscamos reducir las brechas digitales y facilitar un mundo más interconectado, accesible y equitativo para todos.</p>
   </section>
   <section id="vision" class="content">
     <h2>Visión</h2>
-    <p>Nuestra visión es convertirnos en líderes en el diseño, implementación y gestión de soluciones de redes innovadoras y seguras, brindando un servicio al cliente excepcional y ayudando al avance tecnológico.</p>
+    <p>Nuestra visión es consolidarnos como referentes globales en el diseño, implementación y gestión de soluciones de redes avanzadas, innovadoras y seguras, que respondan a los desafíos presentes y futuros de la conectividad digital. Aspiramos a ser reconocidos por ofrecer un servicio al cliente excepcional, caracterizado por la cercanía, la confiabilidad y la excelencia operativa.</p>
+    <p>Nos proyectamos como un actor clave en el avance tecnológico nacional, impulsando el desarrollo de infraestructuras inteligentes, sostenibles y escalables que promuevan la transformación digital, la competitividad de las organizaciones y la inclusión tecnológica de las comunidades.</p>
+    <img src="img/vision.png" id="vision" alt="vision" style="width:50%; margin-top:1em; display: block; margin-left: auto; margin-right: auto;"/>
   </section>
   <section id="objetivos" class="content">
     <h2>Objetivos</h2>
     <h3>Objetivo General</h3>
     <p>Promover la satisfacción del cliente con más del 80% de usuarios satisfechos.</p>
+   <img src="img/objetivos.png" id="objetivos" alt="objetivos" style="width:50%; margin-top:1em; display: block; margin-left: auto; margin-right: auto;"/>
     <h3>Objetivos Específicos</h3>
     <ul class="clean">
       <li>Tener en cuenta las recomendaciones de nuestros usuarios.</li>
@@ -214,11 +430,7 @@ body:has(footer:in-view) footer {
     <p>Network Technology busca altos estándares de calidad, seguridad y buen servicio, ofreciendo soluciones inalámbricas y cableadas y conectividad a zonas rurales.</p>
   </section>
   <section id="servicio" class="content">
-    <h2>Servicio</h2>
-    <p>Somos una empresa dedicada a la instalación y mantenimiento de redes, configuración de routers y switches, diagnóstico de red y más, con detalles en nuestro portafolio disponible en página web y redes sociales.</p>
-   </section>
-<section id="servicios" class="content">
-    <h2> Nuestro servicios </h2>
+<h2> Nuestro servicios </h2>
     <ul class="clean">
      <li>Diseño e implementación de redes cableadas e inalámbricas.</li>
       <li>Configuración avanzada de routers, switches y firewalls.</li>
@@ -227,18 +439,61 @@ body:has(footer:in-view) footer {
       <li>Soluciones de seguridad perimetral y segmentación.</li>
       <li>Telefonía IP y redes para videovigilancia.</li>
     </ul>
-     <img src="img/servicios.png" alt="Servicios" style="display: block; margin: auto; max-width:100%; height:auto;" />
-      </section>
-    <section id="paquetes" class="content">
+    <h2>Servicios</h2>
+    <table>
+      <tr>
+        <td>Instalación de puntos de red</td>
+        <td class="price">$120.000 – $210.000</td>
+      </tr>
+      <tr>
+        <td>Cableado (por metro)</td>
+        <td class="price">$3.000 – $5.000 /metro</td>
+      </tr>
+      <tr>
+        <td>Mantenimiento preventivo anual</td>
+        <td class="price">$125.000 – $187.000</td>
+      </tr>
+      <tr>
+        <td>Configuración de switches y routers</td>
+        <td class="price">$150.000 – $200.000</td>
+      </tr>
+      <tr>
+        <td>Diagnóstico de red</td>
+        <td class="price">$120.000 – $180.000</td>
+      </tr>
+      <tr>
+        <td>Instalación de red WiFi</td>
+        <td class="price">$150.000 – $200.000</td>
+      </tr>
+    </table>
+  </div>
     <h2>Paquetes & Promociones</h2>
-    <ul class="clean">
-      <li>Starter PyME</li>
-      <li>Escuela Conectada</li>
-      <li>Oficina Segura</li>
-      <li>Rural Link</li>
-      <li>Soporte Plus</li>
-    </ul>
-    <img src="img/Paquetes.png" alt="Paquetes" style="display: block; margin: auto; max-width:100%; height:auto;" />
+<div class="packages-container">
+
+    <!-- Paquete 1 -->
+    <div class="package">
+      <span class="tag">Más vendido</span>
+      <h3>Paquete Instalación</h3>
+      <ul>
+        <li>Instalación de puntos de red</li>
+        <li>Cableado</li>
+        <li>Red WiFi</li>
+      </ul>
+      <div class="price">$750.000 – $800.000</div>
+    </div>
+
+    <!-- Paquete 2 -->
+    <div class="package">
+      <h3>Paquete Mantenimiento</h3>
+      <ul>
+        <li>Mantenimiento preventivo anual</li>
+        <li>Configuración de switches y routers</li>
+        <li>Diagnóstico de red</li>
+      </ul>
+      <div class="price">$800.000 – $915.000</div>
+    </div>
+
+  </div>>
   </section>
   <section id="ventajas" class="content">
     <h2>Ventajas</h2>
@@ -261,11 +516,13 @@ Aquí no eres un cliente más: eres un aliado. Y cuando trabajas con nosotros, t
     <li>Reciclamos equipos electrónicos obsoletos y fomentamos la reducción de residuos.</li>
     <li>Colaboramos con programas de reforestación y conservación en las comunidades donde operamos.</li>
   </ul>
+  <img src="img/ambiental.png" id="ambiental" alt="ambiental" style="width:50%; margin-top:1em; display: block; margin-left: auto; margin-right: auto;"/>
 <h3>2. Social</h3>
   <ul class="clean">
     <li>Apoyamos la capacitación tecnológica en comunidades y escuelas locales.</li>
     <li>Promovemos la inclusión digital, asegurando que más personas tengan acceso a internet y a la educación tecnológica.</li>
   </ul>
+  <img src="img/sostenibilidad.png" id="sostenibilidad" alt="sostenibilidad" style="width:50%; margin-top:1em; display: block; margin-left: auto; margin-right: auto;"/>
 <h3>3. Económico</h3>
   <ul class="clean">
     <li>Adoptamos prácticas de negocio responsables que aseguran la continuidad y crecimiento sostenible de la empresa, generando valor para clientes, empleados y la comunidad.</li>
@@ -274,10 +531,11 @@ Aquí no eres un cliente más: eres un aliado. Y cuando trabajas con nosotros, t
 </section>
 <section id="responsabilidad" class="content">
     <h2>Responsabilidad Social</h2>
-    <img src="img/social.png" alt="Responsabilidad Social" style="max-width:100%;height:auto;" />
-    <p><strong>RSE</strong> es el compromiso voluntario de contribuir al desarrollo sostenible más allá de obligaciones legales.</p>
+    <h3>RSE</h3> 
+    <p>es el compromiso voluntario de contribuir al desarrollo sostenible más allá de obligaciones legales.</p>
     <h3>Corporativo</h3>
     <p>Espacios para que trabajadores salgan de la rutina diaria.</p>
+    <img src="img/social.png" alt="Responsabilidad Social" style="max-width:100%;height:auto;" />
     <h3>Social</h3>
     <p>Donar árboles para mejora ambiental.</p>
     <h3>Empresarial</h3>
@@ -285,16 +543,16 @@ Aquí no eres un cliente más: eres un aliado. Y cuando trabajas con nosotros, t
   </section>
   <footer>
   <div class="footer-content">
-    <h3>Network Technology</h3>
     <p>Conectando personas y empresas a través de soluciones de redes innovadoras, seguras y confiables.</p>
     <div class="footer-links">
-      <a href="mailto:Networktechnology0738@gmail.com">📧 Correo</a>
-      <a href="https://www.facebook.com/" target="_blank">🌐 Facebook</a>
-      <a href="https://wa.me/xxxxxxxxxx" target="_blank">💬 WhatsApp</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Networktechnology0738@gmail.com" target="_blank">📧 Correo</a>
+      <a href="https://www.instagram.com/networktechnology_oficial?igsh=MTlibmtpaWh4OGNuZw==" target="_blank">🌐 Instagram</a>
+      <a href="https://wa.me/3058763935" target="_blank">💬 WhatsApp</a>
     </div>
-  </div>
-  <div class="footer-bottom">
-    &copy; 2025 Network Technology. Todos los derechos reservados.
+    <div class="mascota-container">
+  <div class="dialogo" id="dialogo">¡Hola! 👋 Estoy aquí para ayudarte con tus redes.</div>
+  <img src="img/Mascota.png" alt="Mascota" class="mascota" id="mascota">
+</div>
   </div>
 </footer>
   <script>
@@ -316,6 +574,26 @@ Aquí no eres un cliente más: eres un aliado. Y cuando trabajas con nosotros, t
       behavior: 'smooth'
     });
   }
+</script>
+<script>
+  const mascota = document.getElementById("mascota");
+  const dialogo = document.getElementById("dialogo");
+
+  const frases = [
+    "¡Hola! 👋 Estoy aquí para ayudarte con tus redes.",
+    "¿Necesitas mantenimiento en tu red? 🛠️",
+    "Una buena configuración asegura una conexión estable ⚡",
+    "¿Quieres un diagnóstico de tu red? 📡",
+    "Soy tu asistente tecnológico de confianza 🦊"
+  ];
+
+  let indice = 0;
+
+  mascota.addEventListener("click", () => {
+    dialogo.style.display = "block";
+    dialogo.innerText = frases[indice];
+    indice = (indice + 1) % frases.length;
+  });
 </script>
 </body>
 </html>
