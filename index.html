@@ -166,6 +166,9 @@ body:has(footer:in-view) footer {
       margin: 0;
       padding: 20px;
     }
+    .center {
+  text-align: center;
+}
 
     h2 {
       text-align: center;
@@ -358,6 +361,81 @@ body:has(footer:in-view) footer {
   border-style: solid;
   border-color: transparent transparent transparent #0077cc;
 }
+.titulo-paquetes {
+  font-size: 2.5em;
+  text-align: center;
+  color: #0749b8;
+  margin-bottom: 1em;
+}
+
+.titulo-paquetes {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 0.5em;
+  color: #0749b8; /* azul pastel */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-servicio {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-servicio:hover {
+  transform: translateY(-5px);
+}
+
+.card-servicio h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.card-servicio p {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.card-servicio ul {
+  padding-left: 1.2rem;
+}
+
+.card-servicio li {
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: #0077b6;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.destacado {
+  border-top: 6px solid #ff7b00;
+  background: #fff8f2;
+}
+
+.destacado-tag {
+  background: #ff7b00;
+}
   </style>
   <header>
     <h1>NETWORK TECHNOLOGY</h1>
@@ -400,6 +478,7 @@ body:has(footer:in-view) footer {
 <section id="Inicio" class="content active">
     <h2>Conocenos</h2>
     <p>Somos una empresa dedicada a la instalación y mantenimiento de redes, configuración de routers y switches, diagnóstico de red y más, con detalles en nuestro portafolio disponible en página web y redes sociales..</p>
+    <img src="img/nosotros.png" id="nosotros" alt="nosotros" style="width:70%; margin-top:1em; display: block; margin-left: auto; margin-right: auto;"/>
   </section>
   <section id="mision" class="content">
     <h2>Misión</h2>
@@ -430,70 +509,156 @@ body:has(footer:in-view) footer {
     <p>Network Technology busca altos estándares de calidad, seguridad y buen servicio, ofreciendo soluciones inalámbricas y cableadas y conectividad a zonas rurales.</p>
   </section>
   <section id="servicio" class="content">
-<h2> Nuestro servicios </h2>
+<h1> Instalación de redes </h1>
+<p>Diseñamos y ponemos en marcha la infraestructura de red, asegurando una conexión rápida, estable y adaptada a las necesidades de la empresa, ya sea por cableado estructurado o soluciones inalámbricas. </p>
     <ul class="clean">
-     <li>Diseño e implementación de redes cableadas e inalámbricas.</li>
-      <li>Configuración avanzada de routers, switches y firewalls.</li>
-      <li>Diagnóstico y optimización de red.</li>
-      <li>Cableado estructurado y certificación.</li>
-      <li>Soluciones de seguridad perimetral y segmentación.</li>
-      <li>Telefonía IP y redes para videovigilancia.</li>
+     <li><b>Diseño e implementación de redes LAN, WAN y WLAN:</b> se planifica la red más adecuada para la empresa, ya sea local, amplia o inalámbrica.</li>
+      <li><b>Cableado estructurado (fibra óptica, cable UTP, coaxial):</b> instalación ordenada de cables que garantizan velocidad y organización.</li>
+      <li><b>Instalación de puntos de red y racks de comunicaciones:</b> se colocan salidas de red y se organizan equipos en gabinetes especializados.</li>
+      <li><b>Configuración de switches, routers, firewalls y access points:</b> se preparan los equipos para que la red funcione de forma óptima y segura.</li>
+      <li><b>Integración de redes cableadas e inalámbricas:</b> conexión conjunta de sistemas con y sin cable para mayor flexibilidad</li>
     </ul>
-    <h2>Servicios</h2>
+    <h2>Costos</h2>
     <table>
       <tr>
-        <td>Instalación de puntos de red</td>
-        <td class="price">$120.000 – $210.000</td>
+        <td>Diseño e implementación de LAN/WAN/WLAN</td>
+        <td class="price">$2,000,000 – $8,000,000</td>
       </tr>
       <tr>
-        <td>Cableado (por metro)</td>
-        <td class="price">$3.000 – $5.000 /metro</td>
+        <td>Cableado estructurado (UTP/Fibra)</td>
+        <td class="price">$200,000 – $600,000 por punto de red</td>
       </tr>
       <tr>
         <td>Mantenimiento preventivo anual</td>
         <td class="price">$125.000 – $187.000</td>
       </tr>
       <tr>
-        <td>Configuración de switches y routers</td>
-        <td class="price">$150.000 – $200.000</td>
+        <td>Instalación de puntos de red y racks</td>
+        <td class="price">$800,000 – $3,200,000 por rack</td>
       </tr>
       <tr>
-        <td>Diagnóstico de red</td>
-        <td class="price">$120.000 – $180.000</td>
+        <td>Configuración de switches/routers/firewalls</td>
+        <td class="price">$600,000 – $2,000,000 por equipo</td>
       </tr>
       <tr>
-        <td>Instalación de red WiFi</td>
-        <td class="price">$150.000 – $200.000</td>
+        <td>Integración de redes cableadas e inalámbricas</td>
+        <td class="price">$1,200,000 – $4,000,000</td>
       </tr>
     </table>
-  </div>
-    <h2>Paquetes & Promociones</h2>
-<div class="packages-container">
-
-    <!-- Paquete 1 -->
+  <h1>Mantenimiento de redes </h1>
+<p>Realizamos revisiones preventivas y correctivas para garantizar que la red funcione sin interrupciones, corrigiendo fallas, actualizando equipos y optimizando su rendimiento. </p>
+    <ul class="clean">
+     <li><b>Diagnóstico y resolución de fallas en la red:</b>Detección y reparación de problemas de conectividad.</li>
+      <li><b>Monitoreo preventivo y correctivo de la infraestructura</b> Supervisión constante para evitar fallas y corregirlas rápidamente.</li>
+      <li><b>Actualización de firmware y software de equipos de red:</b>Instalación de mejoras que aumentan la seguridad y estabilidad.</li>
+      <li><b>Reemplazo de equipos dañados o desactualizados: </b>Sustitución de hardware obsoleto o defectuoso.</li>
+      <li><b>Optimización de la velocidad y estabilidad de la red:</b>Ajustes técnicos para mejorar el rendimiento general.</li>
+    </ul>
+     <h2>Costos</h2>
+    <table>
+      <tr>
+        <td>Diagnóstico y resolución de fallas</td>
+        <td class="price">$200,000 – $400,000 por hora</td>
+      </tr>
+      <tr>
+        <td>Monitoreo preventivo/correctivo</td>
+        <td class="price">$400,000 – $1,200,000 mensuales</td>
+      </tr>
+      <tr>
+        <td>Actualización de firmware/software</td>
+        <td class="price">$200,000 – $600,000 por equipo</td>
+      </tr>
+      <tr>
+        <td>Reemplazo de equipos dañados</td>
+        <td class="price">$800,000 – $20,000,000</td>
+      </tr>
+      <tr>
+        <td>Optimización de la red</td>
+        <td class="price">$$400,000 – $1,200,000</td>
+      </tr>
+    </table>
+    <h1>Seguridad de redes</h1>
+<p>Protegemos la información y los sistemas de la empresa mediante firewalls, VPNs y políticas de control de acceso, evitando intrusiones y ataques cibernéticos.</p>
+<ul class="clean">
+     <li><b>Implementación de VPNs para acceso remoto seguro:</b>Detección y reparación de problemas de conectividad.</li>
+      <li><b>Protección contra malware, intrusos y ataques </b>Defensa activa frente a amenazas informáticas.</li>
+    </ul>
+    <div class="packages-container">
     <div class="package">
       <span class="tag">Más vendido</span>
-      <h3>Paquete Instalación</h3>
+      <h3>Implementación de VPNs</h3>
       <ul>
-        <li>Instalación de puntos de red</li>
-        <li>Cableado</li>
-        <li>Red WiFi</li>
+      Configuración de accesos remotos seguros.
+      </ul>
+      <div class="price">$600,000 – $1,600,000</div>
+    </div>
+
+    <div class="package">
+      <h3>Protección contra ataques</h3>
+      <ul>
+      Software de protección + configuración avanzada.
+      </ul>
+      <div class="price">$1,200,000 – $4,000,000</div>
+    </div>
+
+  </div>
+    <h2>Conectividad Inalámbrica</h2>
+<div class="packages-container">
+
+    <div class="package">
+      <h3>Soluciones para alta densidad de usuarios</h3>
+      <ul>
+    Controladores, APs de gama alta y software.
       </ul>
       <div class="price">$750.000 – $800.000</div>
     </div>
 
-    <!-- Paquete 2 -->
     <div class="package">
-      <h3>Paquete Mantenimiento</h3>
+      <h3>Ampliación de cobertura con repetidores</h3>
       <ul>
-        <li>Mantenimiento preventivo anual</li>
-        <li>Configuración de switches y routers</li>
-        <li>Diagnóstico de red</li>
+      Instalación + calibración de señal por repetidor
       </ul>
-      <div class="price">$800.000 – $915.000</div>
+      <div class="price">$400,000 – $1,000,000 </div>
     </div>
 
-  </div>>
+<h2 class="center">Paquetes</h2> <br>
+
+<div class="grid">
+  <div class="card-servicio">
+    <h3>Paquete Básico – Conectividad Inicial</h3>
+    <p><strong>Precio estimado:</strong> $6.000.000 – $12.000.000 COP</p>
+    <ul>
+      <li>Diseño e implementación de red LAN (hasta 10 puntos)</li>
+      <li>Cableado estructurado UTP (hasta 10 conexiones)</li>
+      <li>Instalación de 1 rack de comunicaciones básico</li>
+      <li>Configuración de router y switch principal</li>
+      <li>Soporte técnico remoto (10 horas mensuales)</li>
+    </ul>
+  </div>
+
+  <div class="card-servicio">
+    <h3>Paquete Estándar – Seguridad y Soporte Continuo</h3>
+    <p><strong>Precio estimado:</strong> $16.000.000 – $32.000.000 COP</p>
+    <ul>
+      <li>Diagnóstico completo del estado actual de la red</li>
+      <li>Optimización de la velocidad y estabilidad (balanceo de carga, QoS)</li>
+      <li>Ampliación de cableado estructurado (hasta 20 puntos adicionales)</li>
+      <li>Instalación de 2 Access Points de gama empresarial</li>
+      <li>Soporte técnico presencial y remoto (20 horas mensuales)</li>
+    </ul>
+  </div>
+
+  <div class="card-servicio">
+    <h3>Paquete Estándar – Optimización de Red</h3>
+    <p><strong>Precio estimado:</strong> $10.000.000 – $20.000.000 COP</p>
+    <ul>
+      <li>Incluye beneficios de Instalación y Mantenimiento</li>
+      <li>Plan preventivo trimestral</li>
+      <li>Precios preferenciales en ampliaciones</li>
+      <li>Soporte prioritario y atención personalizada</li>
+    </ul>
+  </div>
+</div>
   </section>
   <section id="ventajas" class="content">
     <h2>Ventajas</h2>
