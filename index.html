@@ -267,7 +267,20 @@ body:has(footer:in-view) footer {
       margin: 10px auto 0;
       border-radius: 2px;
     }
-
+.contenedor {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .bloque {
+      border: 1px solid #ccc;
+      padding: 15px;
+      text-align: center;
+    }
+    .bloque img {
+      width: 200px;
+      margin-bottom: 10px;
+    }
     .packages-container {
       max-width: 900px;
       margin: auto;
@@ -479,6 +492,53 @@ body:has(footer:in-view) footer {
     <h2>Conocenos</h2>
     <p>Somos una empresa dedicada a la instalación y mantenimiento de redes, configuración de routers y switches, diagnóstico de red y más, con detalles en nuestro portafolio disponible en página web y redes sociales..</p>
     <img src="img/nosotros.png" id="nosotros" alt="nosotros" style="width:70%; margin-top:1em; display: block; margin-left: auto; margin-right: auto;"/>
+  <h2>Nuestras etapas de mantenimiento de redes</h2>
+  <p>
+    Nuestros técnicos e ingenieros experimentados y calificados pueden crear de manera competente un flujo de trabajo, establecer comunicaciones y garantizar un equipo de mantenimiento de redes de TI confiable. 
+    El mantenimiento puede ser planificado y se lleva a cabo de acuerdo con un cronograma previamente acordado, así como urgente, en caso de un problema crítico o una emergencia que requiera una intervención profesional urgente. 
+    También proporcionamos soporte técnico remoto.
+  </p>
+
+  <div class="contenedor">
+    <div class="bloque">
+      <h3>Planificación</h3>
+      <img src="img/imagen1.png" alt="Planificación">
+      <p>
+        Estamos desarrollando un proyecto para la futura instalación de equipos de comunicaciones y redes. 
+        Cualquier red informática puede ser cableada, inalámbrica o una combinación. 
+        Los expertos discuten los detalles con usted, tienen en cuenta los requisitos, teniendo en cuenta los parámetros importantes del entorno de información.
+      </p>
+    </div>
+
+    <div class="bloque">
+      <h3>Ingeniería de red informática</h3>
+      <img src="img/imagen2.png" alt="Ingeniería de red informática">
+      <p>
+        Siempre que la red no esté organizada, creamos conjuntamente un proyecto de tendido de red. 
+        Si hay una red, recopilamos información sobre la red local y analizamos el estado del hardware y el software.
+      </p>
+    </div>
+
+    <div class="bloque">
+      <h3>Instalación de redes</h3>
+      <img src="img/imagen3.png" alt="Instalación de redes">
+      <p>
+        En esta etapa, resolvemos los problemas técnicos de instalación de equipos de red. 
+        Coordinamos la compra de equipos y organizamos su trabajo. 
+        Brindamos soporte técnico para la operación del complejo hardware de su infraestructura.
+      </p>
+    </div>
+
+    <div class="bloque">
+      <h3>Mantenimiento de redes</h3>
+      <img src="img/imagen4.png" alt="Mantenimiento de redes">
+      <p>
+        Esta es una etapa permanente de nuestro trabajo, realizamos mantenimiento sistemático de la red y administración remota continua 
+        y creamos un sistema de información y comunicación con los mejores parámetros.
+      </p>
+    </div>
+  </div>
+
   </section>
   <section id="mision" class="content">
     <h2>Misión</h2>
@@ -667,6 +727,49 @@ body:has(footer:in-view) footer {
 Sabemos que para ti la tecnología no es un lujo, sino una herramienta esencial para que tu negocio funcione sin interrupciones. Por eso, trabajamos como si cada cable, cada configuración y cada detalle fueran para nuestra propia empresa.
 Nos eligen porque respondemos rápido, hablamos claro (sin tecnicismos innecesarios) y no descansamos hasta dejar todo funcionando como debe. Además, cuidamos tu inversión con soluciones seguras, escalables y pensadas para durar.
 Aquí no eres un cliente más: eres un aliado. Y cuando trabajas con nosotros, tienes la tranquilidad de contar con un equipo que se preocupa de verdad.</p>
+  <h2>Beneficios de nuestro servicio de mantenimiento de redes</h2>
+  <p>
+    Con nuestro servicio especializado, garantizamos que tu infraestructura de red se mantenga estable, 
+    segura y preparada para el crecimiento de tu empresa. Estos son los principales beneficios:
+  </p>
+
+  <div class="contenedor">
+    <div class="bloque">
+      <h3>✔ Actualización oportuna</h3>
+      <img src="img/ventaja1.png" alt="Actualización oportuna">
+      <p>
+        La mejor solución para aumentar la productividad del equipo y reducir costos, sin necesidad de comprar uno nuevo. 
+        Nuestros ingenieros aseguran que tu empresa se mantenga competitiva con actualizaciones periódicas.
+      </p>
+    </div>
+
+    <div class="bloque">
+      <h3>✔ Solución rápida de problemas</h3>
+      <img src="img/ventaja2.png" alt="Solución rápida de problemas">
+      <p>
+        Auditamos la red, identificamos el problema y lo resolvemos con rapidez. Documentamos la solución para 
+        mantener la continuidad y estabilidad de tu infraestructura.
+      </p>
+    </div>
+
+    <div class="bloque">
+      <h3>✔ Reparar y aumentar las redes</h3>
+      <img src="img/ventaja3.png" alt="Reparar y aumentar las redes">
+      <p>
+        Aumentamos la productividad mediante conexiones adicionales, servidores y almacenamiento. 
+        Reducimos tiempos de inactividad y mejoramos la capacidad de tu red.
+      </p>
+    </div>
+
+    <div class="bloque">
+      <h3>✔ Tolerancia a fallos</h3>
+      <img src="img/ventaja4.png" alt="Tolerancia a fallos">
+      <p>
+        Implementamos conexiones redundantes para garantizar continuidad operativa, incluso ante fallos. 
+        Tu red se mantiene confiable y preparada para cualquier eventualidad.
+      </p>
+    </div>
+  </div>
   </section>
   <section id="organigrama" class="content">
     <h2>Organigrama</h2>
@@ -695,16 +798,41 @@ Aquí no eres un cliente más: eres un aliado. Y cuando trabajas con nosotros, t
 <p><strong>Compromiso:</strong> Creemos que la tecnología debe ir de la mano con el respeto al planeta y las personas, por eso cada proyecto se realiza pensando en minimizar su impacto ambiental y maximizar su beneficio social.</p>
 </section>
 <section id="responsabilidad" class="content">
-    <h2>Responsabilidad Social</h2>
-    <h3>RSE</h3> 
-    <p>es el compromiso voluntario de contribuir al desarrollo sostenible más allá de obligaciones legales.</p>
-    <h3>Corporativo</h3>
-    <p>Espacios para que trabajadores salgan de la rutina diaria.</p>
-    <img src="img/social.png" alt="Responsabilidad Social" style="max-width:100%;height:auto;" />
-    <h3>Social</h3>
-    <p>Donar árboles para mejora ambiental.</p>
-    <h3>Empresarial</h3>
-    <p>Instalaciones adecuadas para trabajadores.</p>
+    <h2>Nuestra responsabilidad</h2>
+  <p>
+    Nos preocupamos por generar un impacto positivo en diferentes ámbitos: corporativo, social y empresarial. 
+    Implementamos acciones que benefician tanto a nuestros colaboradores como al medio ambiente y la comunidad.
+  </p>
+
+  <div class="contenedor">
+    <div class="bloque">
+      <h3>Corporativo</h3>
+      <img src="img/social.png" alt="Responsabilidad Corporativa">
+      <p>
+        Espacios diseñados para que los trabajadores salgan de la rutina diaria y disfruten de un mejor ambiente laboral.
+      </p>
+    </div>
+
+    <div class="bloque">
+      <h3>Social</h3>
+      <img src="img/ambiente.png" alt="Responsabilidad Social">
+      <p>
+        Contribuimos al medio ambiente a través de la donación de árboles y programas de mejora ecológica.
+      </p>
+    </div>
+
+    <div class="bloque">
+      <h3>Empresarial</h3>
+      <img src="img/empresarial.png" alt="Responsabilidad Empresarial" >
+      <p>
+        Brindamos instalaciones adecuadas que favorecen el desarrollo, bienestar y seguridad de nuestros trabajadores.
+      </p>
+    </div>
+    <div class="bloque">
+      <img src="img/nosotros2.png" alt="Responsabilidad nuestra" style="width:80%;"/>
+
+    </div>
+  </div>
   </section>
   <footer>
   <div class="footer-content">
@@ -762,3 +890,4 @@ Aquí no eres un cliente más: eres un aliado. Y cuando trabajas con nosotros, t
 </script>
 </body>
 </html>
+
