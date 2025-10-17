@@ -21,6 +21,55 @@ body:has(footer:in-view) footer {
   opacity: 1;
   transform: translateY(0);
 }
+.collage {
+  display: grid;
+  gap: 10px;
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+.collage img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collage img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+/* Collage con 3 imágenes */
+.collage-3 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Collage con 4 imágenes */
+.collage-4 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Título con estilo */
+#collage1 h2, #collage2 h2 {
+  text-align: center;
+  color: #0077b6;
+  margin-bottom: 20px;
+  font-size: 28px;
+  position: relative;
+}
+
+#collage1 h2::after, #collage2 h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #0077b6;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
 
 .footer-content {
   max-width: 1000px;
@@ -489,6 +538,19 @@ body:has(footer:in-view) footer {
   </nav>
 
 <section id="Inicio" class="content active">
+<section class="card" id="video-publicidad" style="text-align:center; position:relative; overflow:hidden;">
+  <h2 style="margin-bottom:10px;">Bienvenidos a Networktecnology</h2>
+
+  <video id="promoVideo" width="720" height="405" controls autoplay muted loop playsinline
+    style="border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.15); max-width:100%;">
+    <source src="img/Video.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de video.
+  </video>
+
+  <p class="small" style="margin-top:8px; color:#666;">
+    Video institucional — Protege tu información con Networktecnology
+  </p>
+</section>
     <h2>Conocenos</h2>
     <p>Somos una empresa dedicada a la instalación y mantenimiento de redes, configuración de routers y switches, diagnóstico de red y más, con detalles en nuestro portafolio disponible en página web y redes sociales..</p>
     <img src="img/nosotros.png" id="nosotros" alt="nosotros" style="width:70%; margin-top:1em; display: block; margin-left: auto; margin-right: auto;"/>
@@ -544,6 +606,13 @@ body:has(footer:in-view) footer {
     <h2>Misión</h2>
     <p>Nuestra misión es impulsar la conexión entre personas, comunidades y organizaciones mediante el desarrollo y la implementación de tecnologías de redes seguras, confiables y de alto rendimiento. Nos comprometemos a ofrecer soluciones innovadoras y sostenibles que no solo mejoren la conectividad global, sino que también fomenten la colaboración, el intercambio de conocimiento y el crecimiento social.</p>
     <p>A través de un enfoque centrado en la excelencia, la innovación constante y la responsabilidad, buscamos reducir las brechas digitales y facilitar un mundo más interconectado, accesible y equitativo para todos.</p>
+   
+
+  <div class="collage collage-3">
+    <img src="img/foto5.png" alt="Instalación 1">
+    <img src="img/foto6.png" alt="Instalación 2">
+    <img src="img/foto7.png" alt="Instalación 3">
+  </div>
   </section>
   <section id="vision" class="content">
     <h2>Visión</h2>
@@ -567,6 +636,12 @@ body:has(footer:in-view) footer {
     <h2>Justificación</h2>
     <p>Las empresas de redes dependen cada vez más de Internet y tecnología para operar. Requieren servicios profesionales para implementar y mantener redes y minimizar riesgos de fallos.</p>
     <p>Network Technology busca altos estándares de calidad, seguridad y buen servicio, ofreciendo soluciones inalámbricas y cableadas y conectividad a zonas rurales.</p>
+  <div class="collage collage-4">
+    <img src="img/foto1.png" alt="Proyecto 1">
+    <img src="img/foto2.png" alt="Proyecto 2">
+    <img src="img/foto3.png" alt="Proyecto 3">
+    <img src="img/foto4.png" alt="Proyecto 4">
+  </div>
   </section>
   <section id="servicio" class="content">
 <h1> Instalación de redes </h1>
@@ -887,6 +962,20 @@ Aquí no eres un cliente más: eres un aliado. Y cuando trabajas con nosotros, t
     dialogo.innerText = frases[indice];
     indice = (indice + 1) % frases.length;
   });
+</script>
+<script>
+  const video = document.getElementById('promoVideo');
+
+  // Intenta reproducir automáticamente
+  video.play().catch(() => {
+    console.log('Autoplay bloqueado — el usuario debe interactuar.');
+  });
+
+  // Al hacer clic, se activa el sonido y se reproduce
+  document.addEventListener('click', () => {
+    if (video.paused) video.play();
+    if (video.muted) video.muted = false;
+  }, { once: true });
 </script>
 </body>
 </html>
